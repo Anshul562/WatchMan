@@ -1,0 +1,26 @@
+.skeleton{
+    border-radius: 5px;
+}
+
+.skeleton.title{
+    position: relative;
+    width: 1500px;
+    background: rgba(51, 55, 59,0.2);
+    overflow: hidden;
+    border-bottom: none;
+}
+
+
+@keyframes loading {
+    0%{transform: translateX(-200%);}
+    100%{transform: translateX(650%);}
+    
+}
+.shimmer {
+    width: 20%;
+    animation: loading 1.5s infinite;
+    margin-top: -50px;
+    height: 170px;
+    background: rgba(51, 55, 59,0.2);
+    box-shadow: 0 0 30px 30px rgba(51, 55, 59,0.2);
+  }

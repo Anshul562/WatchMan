@@ -1,0 +1,125 @@
+.contents{
+    padding: 10px;
+    margin-top: -90px;
+}
+.info{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: center;
+    border-bottom: 1px solid #456;
+    place-items: center;
+}
+.info>h2,.info>h6{
+    padding: 5px;
+    text-align: center;
+    grid-column: 2;
+}
+.viewOptions{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: baseline;
+}
+.viewOptions>i{
+    color:rgb(88, 138, 138);
+    padding: 5px;
+}
+.list{
+    display: flex;
+    flex-direction:unset;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    transition: flex 2s ;
+}
+.details{
+    visibility: hidden;
+}
+.contents>h2,.contents>h6{
+    font-family: Graphik-Semibold-Web, sans-serif;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.contents>h2{
+    font-weight: 700;
+}
+.contents>h6{
+    padding-bottom: 10px;
+   
+    font-family: TiemposTextWeb-Regular, Georgia, serif;
+    font-size: 1rem;
+}
+
+.hover_contents{
+    text-rendering: optimizeSpeed;
+    font-size: .7rem;
+    opacity: 0;
+    height:285px;
+    width: 190px;
+    display: block;
+    margin-top: -285px;
+    padding:10px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    transition: all 0.2s ease-out;
+    font-weight: 600;
+    border-radius: 10px;
+    text-shadow:2px 2px 6px rgb(0, 0, 0) ;
+}
+.hover_contents>h4{
+    font-size: 1.2rem;
+}
+
+.allItems:hover .hover_contents{
+    opacity: 1;
+    color:whitesmoke;
+    transition: all 0.2s ease-out;
+}
+.rank{
+    font-weight: 600;
+    border-radius: 5px 0 5px 0;
+    height:20px;
+    width:20px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #379;
+    margin-top: -285px;
+}
+.listChild{
+    height:285px;
+    width: 190px;
+    border-radius: 5px;
+    image-rendering:optimizeSpeed;
+    transition: transform 450ms;
+}
+@media (max-width:768px) {
+    .listChild{
+        width: 117px;
+        height:190px;
+    }
+    .hover_contents{
+        width: 117px;
+        height: 190px;
+        margin-top: -190px;
+    }
+    .rank{
+        margin-top:-190px ;
+    }
+    .hover_contents>h4{
+        font-size: 1rem;
+    }
+    .hover_contents>h6{
+        font-size: 0.9rem;
+    }
+    .hover_contents>p{
+        visibility: hidden;
+    }
+
+}
+

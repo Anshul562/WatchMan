@@ -1,0 +1,14 @@
+.title{
+    padding-top: 80px;
+    text-align: center;
+    border-bottom: 1px solid #456;
+    font-family: TiemposTextWeb-Regular, Georgia, serif;
+    width: auto;
+}
+.title>h6{
+    font-family: Graphik-Semibold-Web, sans-serif;
+    
+}
+.aqua{
+    color:aqua;
+}

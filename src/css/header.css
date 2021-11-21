@@ -1,0 +1,62 @@
+.nav_logo{
+    object-fit: contain;
+    background:url("../media/arbg.png") no-repeat;
+    background-size: contain;
+    width:200px;
+    height: 30px;
+    margin-right: 20px;
+}
+.login__btn{
+    color:#ebe6e6;
+    border:none;
+    border-radius: 10px;
+    background: #2A71B4;
+    height: 40px;
+}
+.navbar{
+    z-index: 100;
+    background:none;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s;
+}
+#navbarSupportedContent{
+    transition: all 0.25s;
+    cursor: pointer;
+}
+.trans .navbar-toggler{
+visibility: hidden;
+}
+.navbar-dark{
+    backdrop-filter: blur(15px);
+}
+.navbar-toggler{
+    border: none;
+    transition: all 0.5s;
+}
+.navbar-toggler:focus{
+    border: none;
+    transition: all 0.5s;
+    box-shadow: none;
+    z-index:200;
+}
+
+.form-control[type=search]{
+    color:white !important;
+    background: none;
+    width:50%;
+    border-radius: 10px;
+}
+
+.btn-outline-success{
+    color:white !important;
+    background: none;
+    border: 1px solid #e6e6e6;
+    
+}
+.btn-outline-success:hover{
+    transition: all 0.5s ease-out;
+}
+
+
+
