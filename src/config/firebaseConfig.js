@@ -44,4 +44,4 @@ export const signInWithGoogle = async () => {
 
   export const logout = () => {
     auth.signOut();
-  };
+  }

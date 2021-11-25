@@ -6,7 +6,7 @@ import "./css/Row.css"
 import "./css/List.css"
 import "./css/search.css"
 
-const base_url = "https://image.tmdb.org/t/p/original/";
+const base_url = "https://image.tmdb.org/t/p";
 
 function SearchMovie({ match }) {
     // console.log(match)
@@ -49,8 +49,8 @@ function SearchMovie({ match }) {
 
 
                 {((match.params.type === "g") ? (movie) : (query)).map((list) => (
-                    <Link key={list.id} to={'/content/'+((list?.media_type==="movie") ? "m":"t")+list.id}  target="_blank"><div className="allItems" key={list.id}>
-                        <img src={(base_url + list.poster_path)} className="listChild" alt={list.title} />
+                    <Link key={list.id} to={'/content/'+((!list?.first_air_date) ? "m":"t")+list.id}  target="_blank"><div className="allItems" key={list.id}>
+                        <img src={(base_url + "/w220_and_h330_face"+ list.poster_path)} className="listChild" alt={list.title} />
 
                         <div className="hover_contents">
                             <h4>{list.title|| list.name || list.original_title || list.original_name }</h4>

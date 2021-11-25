@@ -3,9 +3,16 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import "./css/Banner.css"
 import requests from "./requests";
+import { auth, db } from "./config/firebaseConfig";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function Banner({ url }) {
     const [movie, setMovie] = useState([]);
+    const [user] = useAuthState(auth);
+
+
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,12 +27,28 @@ function Banner({ url }) {
         fetchData()
     }, [url]);
 
+    const addToWatchlist = async () => {
+        try {
+            await db.collection("users")
+                .doc(user.email)
+                .collection('watchlist')
+                .doc(`${movie.id}`)
+                .set({ movie})
+                .then(function () {
+                    console.log('successfully added')
+                })
+        } catch (err) {
+            console.error(err);
+            alert(err.message);
+        }
+    }
+
     const base_url = "https://image.tmdb.org/t/p/original/";
 
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
-    return (
+        return (
         <>
             {(movie && (
                 <div className="banner" style={{
@@ -38,7 +61,7 @@ function Banner({ url }) {
                             {movie.title || movie.name}
                         </h1>
                         <div className="banner_buttons">
-                            <button className="banner_button">Add To My list</button>
+                        {user ? <button className="banner_button" id="watchlist-btn" onClick={addToWatchlist}>Add to watchlist</button> : ""}
                             <Link key={movie.id} to={'/content/m' + movie?.id}><button className="banner_button">View More</button></Link>
                         </div>
                         <div className="banner_guide">

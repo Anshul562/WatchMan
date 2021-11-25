@@ -1,3 +1,4 @@
+
 .nav_logo{
     object-fit: contain;
     background:url("../media/arbg.png") no-repeat;
@@ -10,8 +11,15 @@
     color:#ebe6e6;
     border:none;
     border-radius: 10px;
-    background: #2A71B4;
+    background: rgba(42, 113, 180);
     height: 40px;
+    width: 80px;
+    margin-right: 10px;
+}
+.login__avatar{
+    border-radius: 50%;
+    width: 50px;
+    padding: 7px;
 }
 .navbar{
     z-index: 100;
@@ -23,6 +31,10 @@
 #navbarSupportedContent{
     transition: all 0.25s;
     cursor: pointer;
+}
+.login-data{
+    display: flex;
+    align-items: center;
 }
 .trans .navbar-toggler{
 visibility: hidden;
@@ -50,13 +62,16 @@ visibility: hidden;
 
 .btn-outline-success{
     color:white !important;
-    background: none;
-    border: 1px solid #e6e6e6;
-    
+    background: rgba(42, 113, 180,0.4);
+    border: none;    
 }
 .btn-outline-success:hover{
     transition: all 0.5s ease-out;
 }
 
 
-
+@media (max-width:991.2px) {
+    .login-data{
+        display: block;
+    }
+}

@@ -1,13 +1,14 @@
 *{
     image-rendering: optimizeSpeed;
 }
+.rowContainer{
+    padding-left: 20px;
+    width:98%;
+}
 .row{
-    user-select: none;
     color:#fff;
     object-fit: contain;
-    height: max-content;
     padding-top: 10px;
-    padding-left: 10px;
 }
 .titles{
     display: flex;
@@ -53,6 +54,7 @@
     padding-bottom: 5px;
     overflow: hidden;
     overflow-x: scroll;
+    padding-left: 0px;
 }
 .row_posters_clustered{
     display:flex;
